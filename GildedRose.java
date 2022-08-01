@@ -8,17 +8,16 @@ class GildedRose {
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (this.items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                Backstage b = items[i];
+                items[i] = new Backstage(items[i].name, items[i].sellIn, items[i].price);
                 b.qualityUpdate();
             } else if (this.items[i].name.equals("Aged Brie")) {
-                Brie b = items[i];
+                items[i] = new Brie(items[i].name, items[i].sellIn, items[i].price);
                 b.qualityUpdate();
             } else if (this.name.equals("Sulfuras, Hand of Ragnaros")) {
                 return;
             } else {
-                Standard b = items[i];
+                items[i] = new Standard(items[i].name, items[i].sellIn, items[i].price);
                 b.qualityUpdate();
-            }
         }
     }
 }
