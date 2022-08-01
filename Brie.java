@@ -4,5 +4,6 @@ public class Brie extends Item {
     }
     public void qualityUpdate(){
         if(this.quality<50) this.quality++; 
+        this.sellIn -= 1;
     }
 }
